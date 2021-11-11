@@ -1,0 +1,62 @@
+{% extends './base.html' %}
+
+{% block title%} Contacto {% endblock %}
+
+{% block body %}
+<div>
+    <div>
+        
+        <div class="px-4 py-5 my-5 text-center">
+            
+            <h1 class="display-4 fw-bold">Insertar Matriz</h1>
+            <div class="col-lg-8 mx-auto">
+                <div>
+                    <h1>Función</h1>
+                    <h1></h1>
+                    <form action="/contacto" method="post">
+                        {% for leng in lenguajes %}
+                        <label for="x{{loop.index}}"></label>
+                        <input name="x{{loop.index}}" type="type" size="10"  aria-label="Example text with button addon" aria-describedby="button-addon1"></input>X{{loop.index}}+
+                        {% endfor %}
+                        <br>
+
+                        <h1></h1>
+                        <label for="objetivo">¿Cuál es el objetivo de la función?</label>
+                        <select name="objetivo">
+                            <option value="min">Minimizar</option>
+                            <option value="max">Maximizar</option>
+                        </select>
+                        
+                        <h1>Restricciones</h1>
+                        <h1></h1>
+                            {% for leng in lenguajes2 %}
+                            {% set loop1 = loop.index %}
+                            {% for leng in lenguajes %}
+                                <label for="y{{loop1}}{{loop.index}}"></label>
+                                <input  name="y{{loop1}}{{loop.index}}"type="type" size="10"></input>X{{loop.index}}+
+                            {% endfor %}
+                            <label for="r2{{loop.index}}"></label>
+                            <select name="r2{{loop.index}}">
+                                <option value="ma">≥</option>
+                                <option value="me">≤</option>
+                                <option value="ig">=</option>
+                            </select>
+                            <label for="z{{loop.index}}"></label>
+                            <input name="z{{loop.index}}"type="type" size="10"></input>
+                            <br>
+                            {% endfor %}
+                            <h1></h1>
+                            <h1></h1>
+                            <h1></h1>
+                            <input type="submit" class="btn btn-success" value="Calcular"/>
+                    </form>
+                </div>
+            </div>
+          </div>
+
+        
+    </div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,106 @@
+{% extends './base.html' %}
+
+{% block title%} Resultado {% endblock %}
+
+{% block body %}
+<div>
+    <div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 style="text-align:center">Matriz Ingresada</h1>
+                <div class="table-responsive" >
+                    <table class="table table-striped">
+                        <tbody>
+                            {% for leng in matriz%}
+                            <tr>
+                            {% for l in leng %}
+                                
+                                <td>{{l}}</td>
+                            {% endfor %}
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        {% if t1 != 0 %}
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 style="text-align:center">FASE I</h1>
+                {% for z in t1 %}
+                <h3>Iteración {{loop.index0}}: </h3>  
+                <div class="table-responsive" >
+                    <table class="table table-striped">
+                        <tbody>
+                            {% for leng in m1[loop.index0] %}
+                            <tr>
+                            {% for l in leng %}
+                                <td>{{l}}</td>
+                            {% endfor %}
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        {% if t2 != 0 %}
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 style="text-align:center">FASE II</h1>
+                {% for z in t2 %}
+                <h3>Iteración {{loop.index0}}: </h3>
+                <div class="table-responsive" >
+                    <table class="table table-striped">
+                        <tbody>
+                            {% for leng in m2[loop.index0] %}
+                            <tr>
+                            {% for l in leng %}
+                                <td>{{l}}</td>
+                            {% endfor %}
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 style="text-align:center">Respuesta</h1>
+                    <h3>{{imp}}</h3>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                {% if imp == desplegar %}
+                <h3>Z: {{Rez}}</h3>
+                {% for l in resultT %}
+                <h3>X{{loop.index}}: {{resultT[loop.index]}}</h3>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        
+        {% if g == 2 %}
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 style="text-align:center">Método Gráfico</h1>
+                <img src="../static/grafica.jpg" class="center" alt="grafica">
+            </div>
+        </div>
+        {% endif %}
+        
+        
+            
+        
+        
+    </div>
+</div>
+{% endblock %}
