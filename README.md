@@ -1,4 +1,4 @@
-# Proyecto E - CCAAI: P´agina web educativa para resolver el m´etodo
+# Proyecto E - CCAAI: Página web educativa para resolver el método
 simplex.
 
 ## Equipo - Sitatyr
