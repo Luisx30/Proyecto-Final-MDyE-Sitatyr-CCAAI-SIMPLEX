@@ -32,4 +32,4 @@ procedimiento o las iteraciones y no son educativas para el usuario.
 
 
 
-![Pagina Web_Ejecutado]https://github.com/Luisx30/Proyecto-Final-MDyE-Sitatyr-CCAAI-SIMPLEX/blob/main/Ss.png
+![Pagina Web_Ejecutado](https://github.com/Luisx30/Proyecto-Final-MDyE-Sitatyr-CCAAI-SIMPLEX/blob/main/Ss.png)
