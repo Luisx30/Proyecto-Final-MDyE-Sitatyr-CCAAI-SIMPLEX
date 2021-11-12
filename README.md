@@ -32,4 +32,4 @@ procedimiento o las iteraciones y no son educativas para el usuario.
 
 
 
-![Virus_Ejecutado](https://github.com/Enrique290/Proyecto.E-Virus-Trollano/blob/main/ScreenShot.jpg)
+![Virus_Ejecutado](https://github.com/Enrique290/Proyecto.E-Virus-Trollano/blob/main/Ss.png)
